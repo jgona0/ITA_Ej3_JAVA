@@ -1,6 +1,12 @@
+/*
+ * Tercer exercici IT ACADEMY
+ * Xavi Gonzalez JAVA-1
+ */
+
+
 import java.util.*;
 
-public class E3 {
+public class TercerExerciciApp {
 
 	public static void main(String[] args) {
 		
