@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+<meta charset="UTF-8">
+<title>EJ_3</title> 
+
+ <script>
+   
+function fillArray(city){
+    var output =[]    
+    for (var z=0; z<city.length;z++){
+        output[z] = city.charAt(z);
+    }
+ return output;   
+}
+    
+    
+function reverseAndPrint (input){
+    var output = [];
+    var index = 0;
+    for (var i=input.length-1;i>=0;i--){
+        output[index] = input[i];
+        document.write(output[index]);
+        index++;
+    }
+    document.write(" ");
+    return output;
+};
+      
+</script>
+    
+</head>
+
+<body>
+    
+<script>
+
+document.write("<h1>Fase1</h1>");
+		
+var s0= prompt("Introduce la primera ciudad:");
+var s1= prompt("Introduce la segunda ciudad:");
+var s2= prompt("Introduce la tercera ciudad:");
+var s3= prompt("Introduce la cuarta ciudad:");
+var s4= prompt("Introduce la quinta ciudad:");
+var s5= prompt("Introduce la sexta ciudad:");
+		
+document.write(s0 + " , " + s1 + " , " + s2 + " , " + s3 + " , " + s4 + " , " + s5);    
+    
+
+document.write("<h1>Fase2</h1>");
+
+// cremaos y llenamos el nuevo array de cuiudades y lo ordenamos para después imprimirlo
+var arrayCiutats = new Array();
+		
+arrayCiutats[0]= s0;
+arrayCiutats[1]= s1;
+arrayCiutats[2]= s2;
+arrayCiutats[3]= s3;
+arrayCiutats[4]= s4;
+arrayCiutats[5]= s5;
+		
+arrayCiutats.sort();
+		
+for (var i = 0; i<arrayCiutats.length;i++) {
+	
+	document.write(arrayCiutats[i] + " ");
+	
+}
+
+    
+document.write("<h1>Fase3</h1>");
+    
+// recorremos el array y hacemos el reemplazo de "a" por "4"	
+var arrayCiutatsModificades = new Array(6);
+		
+for (var j = 0; j<arrayCiutats.length;j++) {
+	
+	arrayCiutatsModificades[j] = arrayCiutats[j].replace("a", "4");
+	
+	document.write(arrayCiutatsModificades[j] +" ");
+	
+}
+
+
+    
+document.write("<h1>Fase4</h1>");
+ 
+// Llamamos al método fillArray para llenar el array con cada letra de las ciudades
+var c0 = fillArray(s0);
+var c1 = fillArray(s1);
+var c2 = fillArray(s2);
+var c3 = fillArray(s3);
+var c4 = fillArray(s4);
+var c5 = fillArray(s5);
+    
+    
+//LLamamos al método que pone las letras del revés e imprime el resultado
+c0 = reverseAndPrint(c0)
+c1 = reverseAndPrint(c1)
+c2 = reverseAndPrint(c2)
+c3 = reverseAndPrint(c3)
+c4 = reverseAndPrint(c4)
+c5 = reverseAndPrint(c5)
+    
+    
+</script>    
+    
+</body>
+</html>
